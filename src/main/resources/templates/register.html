@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link
+            href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet" />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script
+            src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js">
+
+    </script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script
+            src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+
+    </script>
+</head>
+<body>
+<script>
+    function account() {
+        var length = document.getElementById('username').value;
+        if(length<4)
+        {
+            alert("The Username must be at least 4 characters");
+            window.location.href('register');
+        }
+    }
+</script>
+<form id="form1" class="well"
+      style="width: 30em; margin: auto; margin-top: 150px;">
+    <h3>User Registration</h3>
+    <div class=" input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i
+                      class="glyphicon glyphicon-user" aria-hidden="true"></i></span> <input
+            id="username" type="text" maxlength="10" class="form-control" placeholder="Username"
+            aria-describedby="sizing-addon1" />
+    </div>
+    <br />
+    <div class="input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i
+                      class="glyphicon glyphicon-lock"></i></span> <input type="password"
+                                                                          id="password" class="form-control" placeholder="Password"
+                                                                          aria-describedby="sizing-addon1" />
+    </div>
+    <div class="input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i
+                      class="glyphicon glyphicon-lock"></i></span> <input type="password"
+                                                                          id="password1" class="form-control" placeholder="Password Confirmation"
+                                                                          aria-describedby="sizing-addon1" />
+    </div>
+    <div class=" input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i
+                      class="glyphicon glyphicon-user" aria-hidden="true"></i></span> <input
+            id="email" type="text" class="form-control" placeholder="Email"
+            aria-describedby="sizing-addon1" />
+    </div>
+    <div class=" input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i
+                      class="glyphicon glyphicon-user" aria-hidden="true"></i></span> <input
+            id="phone" type="text" class="form-control" placeholder="Telephone"
+            aria-describedby="sizing-addon1" />
+    </div>
+    <!--     <div class="well well-sm" style="text-align: center;">
+             <input  type="radio" name="kind" value="tea" /> 管理员 <input
+                   type="radio" name="kind" value="stu" /> 学生
+         </div>
+     -->
+    <button type="button" class="btn btn-success btn-block">Register</button>
+</form>
+<script>
+    function isEmail(str)
+    {
+        var regu = "^(([0-9a-zA-Z]+)|([0-9a-zA-Z]+[_.0-9a-zA-Z-]*))@([a-zA-Z0-9-]+[.])+([a-zA-Z]{2}|net|com|gov|mil|org|edu|int|name|asia)$";
+        var re = new RegExp( regu );
+        if( str.search( re ) == -1 )
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    // 判断是否含有大写字母
+    function hasCapital(str)
+    {
+        var result = str.match(/^.*[A-Z]+.*$/);
+        if(result==null) return false;
+        return true;
+    }
+    // 判断是否含有数字
+    function hasNumber(str)
+    {
+        var result = str.match(/^.*[0-9]+.*$/);
+        if(result==null) return false;
+        return true;
+    }
+    // 判断是否含有其他字符
+    function hasOther(str)
+    {
+        var result = str.match(/^.*[^0-9A-Za-z]+.*$/);
+        if(result==null) return false;
+        return true;
+    }
+    function judge(){
+        var accountlength = document.getElementById('username').value.length;
+        var p1 = document.getElementById('password').value;
+        var p2 = document.getElementById('password1').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        if(accountlength<4)
+        {
+            alert("The Username must be at least 4 characters");
+
+        }
+        if(p1.trim()!=p2.trim()){
+
+            alert("The password does not match");
+            window.location.href('register');
+        }
+        if(!hasCapital(p1)||!hasOther(p1)||!hasNumber(p1)||p1.length<6||p1.length>12){
+            alert("The password should be 6-12 length with capital, number and symbols");
+            window.location.href('register');
+        }
+        if(!isEmail(email)){
+            alert("Invalid email");
+            window.location.href('register');
+        }
+        if(!hasNumber(phone)){
+            alert("Invalid phone");
+            window.location.href('register');
+        }
+
+        else {return true;}
+    }
+    $("#form1").on("click",".btn",function(e){
+        var radioValue = $('input:radio[name="kind"]:checked').val();
+        var formData=$("#form1").serialize();
+
+        if(judge()){
+        $.ajax({
+            url:"register/action",
+            type:"get",
+            data:{username:$("#username").val(),
+                  password:$("#password").val(),
+                  email:$("#email").val(),
+                  phone:$("#phone").val()
+            },
+            success:function(result){
+
+                if(result=="success"){
+                    alert("Successfully registed");
+                    window.location.href = "login";
+                }
+                if(result=="exist") {
+                    alert("The username is existed, please change one");
+                }
+
+            },
+            error:function (result) {
+                alert("Username not found, please register");
+                return false;
+
+            }
+        })
+    }})
+
+</script>
+</body>
+</html>

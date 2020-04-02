@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Main css -->
+<link href="assets/css/main-style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    
+    		
+			<div class="nav-top-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-left">
+						<ul>
+<!--
+							<li>
+								<form class="woocommerce-ordering" method="get">
+                                    
+                                    <p>Group 8</p>
+
+								</form>
+							</li>
+							
+-->
+
+							<li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>English</option>
+										<option>简体中文</option>
+										<option>Italiano</option>
+									</select>
+								</form>
+							</li>
+                            
+                            <li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>USD</option>
+										<option>EURO</option>
+										<option>RMB</option>
+									</select>
+								</form>
+							</li>
+                            
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-right">
+						<ul>
+							<li><a href="profile">My Account</a></li>
+							<!--							<li><a href="#">Today's Deal</a></li>-->
+							<!--							<li><a href="#">My Wishlist</a></li>-->
+							<li><a href="#">Welcome!</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Navigation Area
+	===================================== -->
+	<!--<div class="nav-top-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-left">
+						<ul>
+							<li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>USD</option>
+										<option>EURO</option>
+										<option>Relish</option>
+									</select>
+								</form>
+							</li>
+							
+							<li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>EN</option>
+										<option>EU</option>
+										<option>RE</option>
+									</select>
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-right">
+						<ul>
+							<li><a href="#">My Account</a></li>
+							<li><a href="#">Today's Deal</a></li>
+							<li><a href="#">My Wishlist</a></li>
+							<li><a href="#">Log In</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	
+	<!-- Navigation Area
+	===================================== -->
+		<div class="logo-section">
+		<div class="container">
+			<div class="logo-wrap">
+				<div class="logo">
+					<a href="welcome"><img class="" src="assets/images/logo.png" alt=""></a>
+        
+				</div>
+                
+                <div class="widget_product_search">
+					<input type="text" id="idiot" class="form-control search-box" placeholder="Search" style="background-color: darkblue">
+					<button onclick="query()" type="submit" class="submit-search"><i class="fa fa-search"></i></button>
+				</div>
+
+                <form class="woocommerce-ordering" method="get">
+                     <p>     &nbsp &nbsp  </p>
+
+                                    
+                    <p>     &nbsp &nbsp Group 8 </p>
+
+								</form>
+                    
+              
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Navigation Area
+        ===================================== -->
+		<div class="navbar-sticky" >
+			<nav class="navbar navbar-index-top shadow">
+				<div class="container header-container">
+					<div id="main-menu-wrap"><a href="#" class="menu-trigger"></a></div>
+					<!-- Main Menu -->
+					<div id="main-menu" class="main-nav mega_menu_wrapper ">
+					
+						<ul id="custom-menu" class="main-menu mega_menu">
+							<li class="menu-child-list"><a href="welcome"><font color="white">Game Store</font></a></li>
+						<li class="menu-child-list"><a href="myCollection"><font color="white">My Collection</font></a></li>
+						<li><a href="findPlayer"><font color="white">Find Players</font></a></li>
+						<li><a href="community"><font color="white">Community</font></a></li>
+						<li><a href="support"><font color="white">Support</font></a></li>
+						</ul>
+					</div>
+					
+					<div class="pull-right nav-right-section">
+						<ul class=" navbar-mini-cart-wrapper">
+
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+	<!-- Navigation Area
+	===================================== -->
+	<!--<div class="navbar-sticky">
+		<nav class="navbar navbar-index-top shadow">
+			
+			
+			<div class="container header-container">
+
+				<div id="main-menu-wrap"><a href="#" class="menu-trigger"></a></div>
+				
+				
+				 Main Menu 
+				<div id="main-menu" class="main-nav mega_menu_wrapper ">
+				
+					<ul id="custom-menu" class="main-menu mega_menu">
+						<li class="menu-child-list"><a href="index">Home</a></li>
+						<li class="menu-child-list"><a href="about">About us</a></li>
+						<li><a href="shop">Shop</a></li>
+						<li><a href="shop-single">Shop single</a></li>
+						<li><a href="myCollection">Cart</a></li>
+						<li><a href="shop-checkout">Checkout</a></li>
+						<li class="menu-child-list"><a href="contact-us">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="pull-right nav-right-section">
+					<ul class=" navbar-mini-cart-wrapper">
+						<li>
+							<i class="fa fa-phone" aria-hidden="true"></i> +021-3456-789
+						</li>
+						<li>
+							<a href="#" class="navbar-mini-cart-btn">
+								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+								<span class="item-count">21</span>
+							</a>-->
+							<!--<ul class="navbar-mini-cart">
+								<li class="item">
+									<div class="product-img">
+										<img src="assets/images/products/small-1.jpg" alt="">
+									</div>
+									<div class="product-details">
+										<h6>Name of the product</h6>
+										<p>$255.5</p>
+										<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+									</div>
+								</li>
+								<li class="item">
+									<div class="product-img">
+										<img src="assets/images/products/small-2.jpg" alt="">
+									</div>
+									<div class="product-details">
+										<h6>Name of the product</h6>
+										<p>$155.5</p>
+										<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+									</div>
+								</li>
+								<li class="minicart-price-total">
+									<div class="price-total">
+										<span class="label-price-total">Subtotal</span>
+										<div class="price-total-w">
+											<span>$255.5</span>
+										</div>
+									</div>
+
+									<div class="checkout-btn">
+										<a href="shop-cart" class="btn btn-default">View Cart</a>
+										<a href="shop-checkout" class="btn btn-default ml-5">checkout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul> end  navbar-mini-cart -->
+	<!--			</div>
+			</div>
+
+		</nav>
+	</div>
+</header>
+<div id="page_wrapper"></div>-->
+
+<!-- Slider Area
+===================================== -->
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="sidebar-menu">
+					<ul class="sidebar-ul">
+						<li>Rencent Played With</li>
+
+						<li>
+							<a href="findPlayer" style="font-weight: bold; color: black">Search by Name</a>
+						</li>
+						<li>
+							<a href="FindPlayerByLocation">Search by Location</a>
+						</li>
+					
+					<!--<ul class="mt-15">
+						<li>Most Popular</li>
+						<li>
+							<a href="#">Organic Medicine</a>
+						</li>
+						<li>
+							<a href="#">Beauty & spa</a>
+						</li>
+					</ul>-->
+					</ul>
+				</div>
+				<!--<div class="sidebar-menu-bottom mt-30">
+					<h4>Get Notifications</h4>
+					<a href="#" class="btn subscribe">SUBSCRIBE</a>
+				</div>-->
+			</div>
+>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Navigation Area
+===================================== -->
+<section id="welcome-text">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 pr-gero">
+				<!--<div class="welcome-content">
+					<div class="organix-header text-left">
+						<h1>Welcome to <br>The Organix</h1>
+						<div class="heading-border"></div>
+						<p>
+							Health care with organic science
+						</p>
+					</div>
+					
+					<p>
+						Duis autem vel eum irure dolor n hendrer it in <br>
+						vul uputate velt esse molestie conseq uat. Duis <br>
+						suautem vel eupm irure dolor in hendrerit in v <br>
+						ulputate velit esse molestie.
+					</p>
+					
+					<a class="btn btn-default" href="#"> read more </a>
+				</div>-->
+			</div>
+			<div class="col-md-6 pl-gero">
+				<div class="welcome-content-image">
+					<!--<img class="img-responsive" src="assets/images/wc-1.jpg" alt="">-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+    
+    
+    
+<!-- Navigation Area
+
+
+===================================== -->
+
+<!-- End Section Image Content  -->
+
+<!-- Navigation Area
+===================================== -->
+
+<!-- End Section Image Content  -->
+
+<!-- Navigation Area
+===================================== -->
+	<script>
+		function query() {
+			alert($("#idiot").val());
+			$.ajax({
+				url:"/findPlayer/action",
+				type:"post",
+				data:{
+					username: $("#idiot").val(),
+				},
+				success:function(data){
+					console.log(data);
+					var div = document.getElementById("div1");
+					if(data+""!=0) {
+						div.innerHTML ="<div class=\"col-md-4 col-sm-6 col-xs-6\"> " +
+								"    <div class=\"product-style-2\" style=\"border: 1px solid darkgray\"> " +
+								"                    <ul class=\"navbar-mini-cart\"> " +
+								"       <li class=\"item\"> " +
+								"        <div class=\"product-img\" style=\"margin-left: 40px\"> " +
+								"         <img src=\"assets/images/products/small-4.jpeg\" alt=\"\" style=\"margin-top: 20px\"> " +
+								"        </div> " +
+								"        <div class=\"product-details\" style=\"margin-left: 55px\"> " +
+								"         <h6>Age</h6> " +
+								"         <p>25</p> " +
+								"         <a href=\"#\" style=\"visibility: hidden\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></a> " +
+								"        </div> " +
+								"       </li> " +
+								"       <li class=\"item\"> " +
+								"        <div class=\"product-img\" style=\"margin-left: 90px; margin-top: 10px\"> " +
+								"        <!-- <img src=\"assets/images/products/small-2.jpg\" alt=\"\">--> " +
+								"                                    <h6 style=\"margin-bottom: 10px\">"+data.username+" </h6> " +
+								"        </div> " +
+								"        <div class=\"product-details\" style=\"margin-left: 80px\"> " +
+								"         <h6>Favorite Game Type</h6> " +
+								"         <p>Adventure</p> " +
+								"         <a href=\"#\" style=\"visibility: hidden\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></a> " +
+								"        </div> " +
+								"       </li> " +
+								"       <li class=\"minicart-price-total\"> " +
+								"        <div class=\"price-total\"> " +
+								"         <!--<span class=\"label-price-total\">Subtotal</span>--> " +
+								"         <div class=\"price-total-w\"> " +
+								"         <!-- <span>$255.5</span>--> " +
+								"         </div> " +
+								"        </div> " +
+								" " +
+								"        <div class=\"checkout-btn\" style=\"margin-bottom: 20px\"> " +
+								"         <a class=\"btn btn-default\" style=\"margin-left: 40px\">View</a> " +
+								"         <a class=\"btn btn-default ml-5 \"  style=\"margin-left: 90px\">Add</a> " +
+								"        </div> " +
+								"       </li> " +
+								"      </ul> " +
+								" " +
+								"    " +
+								"    </div> " +
+								"   </div>"
+					}
+					else {div.innerHTML = "<h2 style='margin-left: 300px'>User Not Found</h2>>";}
+				}
+			})
+		}
+	</script>
+<section id="top-selling-product"  class="ptb-100">
+	<div class="container">
+		<div class="row">
+			
+		</div>
+		
+		<div  class="row">
+            
+            <div id='div1'>
+                
+			<div class="col-md-4 col-sm-6 col-xs-6">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+                    <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-4.jpeg" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Age</h6>
+									<p>25</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px">Jim </h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Adventure</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+
+			
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-6">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+			
+                   <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-2.jpeg" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Age</h6>
+									<p>21</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px">Amanda</h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Action</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+                </div></div>
+			<div class="col-md-4 col-sm-6 col-xs-6">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+					 <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-3.jpeg" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Age</h6>
+									<p>19</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px">Caroline</h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Fighting</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+		</div>
+	</div>
+            <div class="col-md-4 col-sm-6 col-xs-6" style="margin-top: 15px">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+					 <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-1.jpg" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Members</h6>
+									<p>6</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px">IG Club</h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Role-playing</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+		</div>
+            </div>
+        <div class="col-md-4 col-sm-6 col-xs-6" style="margin-top: 15px">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+					 <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-5.jpg" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Members</h6>
+									<p>44</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px">EDG Club</h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Strategy</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+		</div>
+            </div>
+        <div class="col-md-4 col-sm-6 col-xs-6" style="margin-top: 15px">
+				<div class="product-style-2" style="border: 1px solid darkgray">
+					 <ul class="navbar-mini-cart">
+							<li class="item">
+								<div class="product-img" style="margin-left: 40px">
+									<img src="assets/images/products/small-6.png" alt="" style="margin-top: 20px">
+								</div>
+								<div class="product-details" style="margin-left: 55px">
+									<h6>Members</h6>
+									<p>15</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="item">
+								<div class="product-img" style="margin-left: 90px; margin-top: 10px">
+								<!--	<img src="assets/images/products/small-2.jpg" alt="">-->
+                                    <h6 style="margin-bottom: 10px"> SKT Club</h6>
+								</div>
+								<div class="product-details" style="margin-left: 80px">
+									<h6>Favorite Game Type</h6>
+									<p>Adventure</p>
+									<a href="#" style="visibility: hidden"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+								</div>
+							</li>
+							<li class="minicart-price-total">
+								<div class="price-total">
+									<!--<span class="label-price-total">Subtotal</span>-->
+									<div class="price-total-w">
+									<!--	<span>$255.5</span>-->
+									</div>
+								</div>
+
+								<div class="checkout-btn" style="margin-bottom: 20px">
+									<a class="btn btn-default" style="margin-left: 40px">View</a>
+									<a class="btn btn-default ml-5 "  style="margin-left: 90px">Add</a>
+								</div>
+							</li>
+						</ul>
+		</div>
+            </div>
+            </div></div></div>
+    
+</section>
+    
+    
+    <div class="cart_coupon_btn">
+							<div class="cart-coupon">
+								<div  style="margin-bottom: 25px">
+									<div style="margin-left: 600px;">
+										<ul>
+											<span>
+                                                <li>
+												<input type="text" class="form-control" placeholder="p">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="1">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="2">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="3">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="4">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="5">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="n">
+											</li> 
+                                            </span>
+									<!--		<li>
+												<a href="#" class="btn btn-default checkout-button">Apply Coupon</a>
+											</li>-->
+										</ul>
+									</div>
+								</div>
+<!-- End Section Image Content  -->
+
+<!-- Latest News Area
+
+< End Section Image Content  -->
+
+
+<!-- Latest News Area
+===================================== -->
+
+<!-- End Section Image Content  -->
+
+<!-- Partners Area
+===================================== -->
+
+<!-- End Section Image Content  -->
+
+<!-- Footer Area
+===================================== -->
+
+<!-- End Section Image Content  -->
+
+<!-- ============ Js Files ============ -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Core js -->
+<script src="assets/js/jquery-3.1.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>	
+
+<script src="assets/js/menu.js"></script>	
+<script src="assets/js/jquery.sticky.js"></script>	
+<script src="assets/js/owl.carousel.min.js"></script>	
+<script src="assets/js/jquery.dcjqaccordion.min.js"></script>	
+<!--<script src="assets/js/instagram.js"></script>-->	
+<script src="assets/js/appear.js"></script>	
+
+<!-- Google Map -->
+<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+<script src="assets/js/gmap3.min.js"></script>
+
+<!-- Custom Script -->		
+<script src="assets/js/main.js"></script>	
+
+<script>
+	
+</script>
+							</div></div></header>
+</body>
+</html>

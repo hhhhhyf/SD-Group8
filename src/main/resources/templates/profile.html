@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Profile</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+				
+		
+		<!-- Main css -->
+		<link href="assets/css/main-style.css" rel="stylesheet" >
+		<div class="nav-top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="top-bar-left">
+							<ul>
+								<!--
+                                                            <li>
+                                                                <form class="woocommerce-ordering" method="get">
+
+                                                                    <p>Group 8</p>
+
+                                                                </form>
+                                                            </li>
+
+                                -->
+
+								<li>
+									<form class="woocommerce-ordering" method="get">
+										<select class="selectpicker">
+											<option>English</option>
+											<option>简体中文</option>
+											<option>Italiano</option>
+										</select>
+									</form>
+								</li>
+
+								<li>
+									<form class="woocommerce-ordering" method="get">
+										<select class="selectpicker">
+											<option>USD</option>
+											<option>EURO</option>
+											<option>RMB</option>
+										</select>
+									</form>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="top-bar-right">
+							<ul>
+								<li><a href="profile">My Account</a></li>
+								<!--							<li><a href="#">Today's Deal</a></li>-->
+								<!--							<li><a href="#">My Wishlist</a></li>-->
+								<li><a href="#">Welcome!</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</head>
+	<style type="text/css">
+
+		.navbar-index-top .mega_menu>li>a {color:#FFFFFF}
+		#search0{background: #FFFFFF}
+		#search1{background: #FFFFFF}
+		#button{color: #000000;
+		}
+	</style>
+	<body>
+
+
+		
+		<!-- Navigation Area
+			===================================== -->
+			<div class="logo-section">
+				<div class="container">
+					<div class="logo-wrap">
+						<div class="logo">
+							<a href="welcome"><img class="" src="assets/images/logo.png" alt=""></a>
+						</div>
+						
+						<div class="widget_product_search">
+							<input style="color: #000000" type="text" class="form-control search-box" placeholder="Enter Search Items" id="search0">
+					<button type="submit" class="submit-search" id="button"><i style="color: #000000" class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Navigation Area
+        ===================================== -->
+		<div class="navbar-sticky">
+			<nav class="navbar navbar-index-top shadow">
+				<div class="container header-container">
+					<div id="main-menu-wrap"><a href="#" class="menu-trigger"></a></div>
+					<!-- Main Menu -->
+					<div id="main-menu" class="main-nav mega_menu_wrapper ">
+					
+						<ul id="custom-menu" class="main-menu mega_menu">
+						<li class="menu-child-list"><a href="welcome">Game Store</a></li>
+						<li class="menu-child-list"><a href="myCollection">My Collections</a></li>
+						<li><a href="findPlayer">Find Players</a></li>
+						<li><a href="community">Community</a></li>
+						<li><a href="support">Support</a></li>
+					</ul>
+					</div>
+					
+					<div class="pull-right nav-right-section">
+						<ul class=" navbar-mini-cart-wrapper">
+						
+						</ul> <!-- end  navbar-mini-cart -->
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		
+		<div id="page_wrapper"></div>
+		
+		<!-- Common Header Area
+        ===================================== -->
+		<section>
+			<div class="breadcrumps-back">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="breadcrumps-heading">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		
+		<!-- Page Content Area
+        ===================================== -->
+		<section id="shop-single-product" class="ptb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="product-single-content">
+							<div class="row">
+								<div class="col-md-5 col-sm-5">
+									<div class="product-image">
+										<img class="img-responsive" src="assets/images/profile.jpg" alt="">
+									</div>
+								</div>
+								<div class="col-md-7 col-sm-7">
+									<div class="product-content-right">
+										<h3>Username</h3>
+										<div class="single-product-review">
+											<ul>
+												<div class="div1" style="margin-right: 10px">
+													<div>
+														<a href="#" ><h2>6</h2></a>
+													</div>
+													<div><p>Following</p>
+											   </div>
+												
+												</div>
+													<div class="div2" style="margin-left: 10px">
+														<div><a href="#" ><h2>6</h2></a>
+													</div>
+													<div><p>Follower</p>
+											   </div>
+												</div>
+											</ul>
+														
+											
+										</div>
+										<style>
+.div1 {
+display: inline-block;
+	text-align: center
+}
+.div2 {
+display: inline-block;
+	text-align: center;
+}
+.location{ display: inline-block;
+	       font-size: 12px;
+												
+											}
+											.date{font-size: 12px; display: inline-block;}
+</style>
+									
+										<i style="color: #2B0E9D" class="fa fa-map-marker" aria-hidden="true">&nbsp;&nbsp;<p class="location">Edinburgh</p></i>
+										&nbsp;
+										<i style="color: #2B0E9D" class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;&nbsp;<p class="date">Joined on Feb. 12th 2020</p></i>
+										<p>
+											self-introduction
+										</p>
+									</div>
+									
+									<div class="product-quantity">
+										<ul>
+											<li>
+												<button style="background: #2B0E9D" type="submit" >Message</button>
+												<button style="background: #2B0E9D" type="submit" >Follow</button>
+											</li>
+										
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="product-tags">
+								<ul>
+									
+									
+								</ul>
+							</div>
+						</div>
+		<style type="text/css">
+
+		.navbar-index-top .mega_menu>li>a {color:#FFFFFF}
+		input{background: #FFFFFF}
+			
+		.font0{font-size:18px}
+		.form1{width: 25px;height: 25px;}
+		.form2{width: 25px;height: 25px;}
+		.form3{width: 20px;height: 20px;}
+		.tag{width:50px;height: 20px;float:left;background:#bbb;border: 0 solid #333;border-radius: 10px;text-align: center;line-height: 20px;
+		.text0{vertical-align: middle;
+			   display: inline-block;
+			
+			}
+		
+		
+		
+		}
+								
+						
+						<div class="row pt-50">
+							<div class="col-md-12">
+								<div class="tab-horizontal">
+									<!-- Nav tabs -->
+									<style>
+										.p1{font-style: oblique;display: inline-block;}
+										.forum-filter{display: inline-block; }
+										.filter1{display: inline-block;}
+		
+									</style>
+									
+										<h3>User's Colloections</h3><br>
+										<table class="table">
+									<thead>
+										<tr>
+											<th><p class="p1">Sort by</p>&nbsp;&nbsp;<form class="filter1" method="get">
+									<select class="forum-filter">
+										<option>Recently Added</option>
+										<option>Price(low to high)</option>
+										<option>Price(high to low)</option>
+										<option>Title(A-Z)</option>
+										<option>Title(Z-A)</option>
+										<option>Rating(high to low)</option>
+										<option>Rating(low to high)</option>
+										<option>No. of players(high to low)</option>
+										<option>No. of players(low to high)</option>
+										
+									
+										
+									</select>
+								</form></th>
+											<th><a href="#"></a></th>
+											<th><a href="#"></a></th>
+											<th><a href="#"></a></th>
+						                    <th><a href="#"></a></th>
+											<th><form action="#" method="get" class="search1"><input style="color: #000000" type="text" class="form-control search-box" placeholder="Enter Search Items" id="search1"></form></th>
+					
+										</tr>
+									</thead>
+																		<style>.div3 {
+display: inline-block;
+	text-align: center
+}
+.div4 {
+display: inline-block;
+	text-align: center;
+}
+								.price{text-decoration: line-through}
+																			.add{vertical-align: middle}
+											</style>
+			
+									<tbody>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/mario.png" width="100px" height="100px" alt="">
+												</div>
+												<li>
+													<i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+												</li>
+											</td>
+
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Name of game</h5>
+												</div>
+												<br>
+												<div class="div3">
+										<i style="color: #2B0E9D" class="fa fa-apple" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<div class="div4">
+										<i style="color: #2B0E9D" class="fa fa-android" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<p>Added 1 day ago</p>
+											</td>
+											<td class="cart-detail">
+												
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													
+												</div>
+											</td>
+											<td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="color: #AAAAAA" class="price">$9.99</h6>
+												</div>
+												<div class="cart-amount">
+													<h6 style="color: #2B0E9D">$4.99</h6>
+												</div>
+											</td>
+											<td style="vertical-align:middle" class="product-remove">
+												<button style="background: #2B0E9D" type="submit" >Add </button>			
+											</td>
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/mario.png" width="100px" height="100px" alt="">
+												</div>
+												<li>
+													<i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+												</li>
+											</td>
+
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Name of game</h5>
+												</div>
+												<br>
+												<div class="div3">
+										<i style="color: #2B0E9D" class="fa fa-apple" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<div class="div4">
+										<i style="color: #2B0E9D" class="fa fa-android" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<p>Added 1 day ago</p>
+											</td>
+											<td class="cart-detail">
+												
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													
+												</div>
+											</td>
+											<td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="color: #AAAAAA" class="price">$9.99</h6>
+												</div>
+												<div class="cart-amount">
+													<h6 style="color: #2B0E9D">$4.99</h6>
+												</div>
+											</td>
+											<td class="product-remove" style="vertical-align:middle">
+												<button style="background: #2B0E9D" type="submit" >Add </button>			
+											</td>
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/mario.png" width="100px" height="100px" alt="">
+												</div>
+												<li>
+													<i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+												</li>
+											</td>
+
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Name of game</h5>
+												</div>
+												<br>
+												<div class="div3">
+										<i style="color: #2B0E9D" class="fa fa-apple" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<div class="div4">
+										<i style="color: #2B0E9D" class="fa fa-android" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<p>Added 1 day ago</p>
+											</td>
+											<td class="cart-detail">
+												
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													
+												</div>
+											</td>
+											<td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="color: #AAAAAA" class="price">$9.99</h6>
+												</div>
+												<div class="cart-amount">
+													<h6 style="color: #2B0E9D">$4.99</h6>
+												</div>
+											</td>
+											<td style="vertical-align:middle" class="product-remove">
+												<button style="background: #2B0E9D" type="submit" >Add </button>			
+											</td>
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/mario.png" width="100px" height="100px" alt="">
+												</div>
+												<li>
+													<i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+												</li>
+											</td>
+
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Name of game</h5>
+												</div>
+												<br>
+												<div class="div3">
+										<i style="color: #2B0E9D" class="fa fa-apple" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<div class="div4">
+										<i style="color: #2B0E9D" class="fa fa-android" aria-hidden="true">&nbsp;&nbsp;</i></div>
+												<p>Added 1 day ago</p>
+											</td>
+											<td class="cart-detail">
+												
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													
+												</div>
+											</td>
+											<td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="color: #AAAAAA" class="price">$9.99</h6>
+												</div>
+												<div class="cart-amount">
+													<h6 style="color: #2B0E9D">$4.99</h6>
+												</div>
+											</td>
+											<td style="vertical-align:middle" class="product-remove">
+												<button style="background: #2B0E9D" type="submit" class="add" >Add </button>			
+											</td>
+										</tr>
+									</tbody>
+										</table>
+											
+								
+									
+									
+									 <h3>User's Clubs</h3>
+								     		<style>
+										.p1{font-style: oblique;display: inline-block;}
+										.forum-filter{display: inline-block; }
+										.filter1{display: inline-block;}
+												
+									</style>
+									
+										
+										<table class="table">
+						<thead>
+										<tr>
+											
+										<th><p class="p1">Sort by</p>&nbsp;&nbsp;<form class="filter1" method="get">
+									<select class="forum-filter">
+										<option>Recently Added</option>
+										<option>Price(low to high)</option>
+										<option>Price(high to low)</option>
+										<option>Title(A-Z)</option>
+										<option>Title(Z-A)</option>
+										<option>Rating(high to low)</option>
+										<option>Rating(low to high)</option>
+										<option>No. of players(high to low)</option>
+										<option>No. of players(low to high)</option>
+										
+									
+										
+									</select>
+								</form></th>
+								</form></th>
+											<th><a href="#"></a></th>
+											<th><a href="#"></a></th>
+											<th><a href="#"></a></th>
+						                    <th><a href="#"></a></th>
+											
+											<th><form action="#" method="get"><input style="color: #000000" type="text" class="form-control search-box" placeholder="Enter Search Items" id="search2"></form></th>
+					
+										</tr>
+									</thead>
+				<tbody>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/member.png" width="25" height="25" alt="">54 Members &nbsp;
+													
+												</div>
+											</td>
+											<td class="cart-detail" >
+												<div class="cart-name">
+													<a href="#" class="font0">Name of the club</a>
+												</div>
+												<div class="tag"><div style="color: #000000; font-size: 10px;" class="text0">Tags</div> </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YU HE     
+											
+											</td>
+							
+											<td class="cart-detail">
+										    
+												
+											</td>
+							
+							
+											<td class="cart-quantity">
+												
+											</td>
+											<td class="cart-price">
+											
+											</td>
+										
+									
+									
+											<td class="product-remove" style="vertical-align:middle">
+												<button style="background: #2B0E9D" type="submit" >Join the club</button>
+											
+											</td>		
+									
+   
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/member.png" width="25" height="25" alt="">54 Members &nbsp;
+													
+												</div>
+											</td>
+											<td class="cart-detail" >
+												<div class="cart-name">
+													<a href="#" class="font0">Name of the club</a>
+												</div>
+												<div class="tag"><div style="color: #000000; font-size: 10px;" class="text0">Tags</div> </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YU HE     
+											
+											</td>
+							
+											<td class="cart-detail">
+										    
+												
+											</td>
+							
+							
+											<td class="cart-quantity">
+												
+											</td>
+											<td class="cart-price">
+											
+											</td>
+										
+									
+									
+											<td class="product-remove" style="vertical-align:middle">
+												<button style="background: #2B0E9D" type="submit" >Join the club</button>
+											
+											</td>		
+									
+   
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/member.png" width="25" height="25" alt="">54 Members &nbsp;
+													
+												</div>
+											</td>
+											<td class="cart-detail" >
+												<div class="cart-name">
+													<a href="#" class="font0">Name of the club</a>
+												</div>
+												<div class="tag"><div style="color: #000000; font-size: 10px;" class="text0">Tags</div> </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YU HE     
+											
+											</td>
+							
+											<td class="cart-detail">
+										    
+												
+											</td>
+							
+							
+											<td class="cart-quantity">
+												
+											</td>
+											<td class="cart-price">
+											
+											</td>
+										
+									
+									
+											<td class="product-remove" style="vertical-align:middle">
+												<button style="background: #2B0E9D" type="submit" >Join the club</button>
+											
+											</td>		
+									
+   
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/member.png" width="25" height="25" alt="">54 Members &nbsp;
+													
+												</div>
+											</td>
+											<td class="cart-detail" >
+												<div class="cart-name">
+													<a href="#" class="font0">Name of the club</a>
+												</div>
+												<div class="tag"><div style="color: #000000; font-size: 10px;" class="text0">Tags</div> </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YU HE     
+											
+											</td>
+							
+											<td class="cart-detail">
+										    
+												
+											</td>
+							
+							
+											<td class="cart-quantity">
+												
+											</td>
+											<td class="cart-price">
+											
+											</td>
+										
+									
+									
+											<td style="vertical-align:middle" class="product-remove">
+												<button style="background: #2B0E9D" type="submit" >Join the club</button>
+											
+											</td>		
+									
+   
+										</tr>
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/member.png" width="25" height="25" alt="">54 Members &nbsp;
+													
+												</div>
+											</td>
+											<td class="cart-detail" >
+												<div class="cart-name">
+													<a href="#" class="font0">Name of the club</a>
+												</div>
+												<div class="tag"><div style="color: #000000; font-size: 10px;" class="text0">Tags</div> </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YU HE     
+											
+											</td>
+							
+											<td class="cart-detail">
+										    
+												
+											</td>
+							
+							
+											<td class="cart-quantity">
+												
+											</td>
+											<td class="cart-price">
+											
+											</td>
+										
+									
+									
+											<td class="product-remove" style="vertical-align:middle">
+												<button style="background: #2B0E9D" type="submit" >Join the club</button>
+											
+											</td>		
+									
+   
+										</tr>										
+									</tbody>
+										</table>
+
+									<!-- Tab panes -->
+							
+					<style>
+
+
+						
+						<!-- End Product Row Two -->
+
+		<!-- End Section Image Content  -->
+		
+		<!-- Footer Area
+        ===================================== -->
+
+		<!-- End Section Image Content  -->
+		
+		
+		<!-- ============ Js Files ============ -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+			
+			<!-- Core js -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>	
+			
+			<script src="assets/js/menu.js"></script>	
+			<script src="assets/js/jquery.sticky.js"></script>	
+			<script src="assets/js/owl.carousel.min.js"></script>	
+			<script src="assets/js/appear.js"></script>	
+			<script src="assets/js/jquery.dcjqaccordion.min.js"></script>	
+			<!--<script src="assets/js/instagram.js"></script>-->	
+			<!-- Google Map -->
+			<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+			<script src="assets/js/gmap3.min.js"></script>	
+			
+			<!-- Custom Script -->		
+			<script src="assets/js/main.js"></script>	
+			
+			
+	</body>
+</html>
+

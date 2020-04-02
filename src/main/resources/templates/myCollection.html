@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Shop Cart</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+				
+			<div class="nav-top-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-left">
+						<ul>
+<!--
+							<li>
+								<form class="woocommerce-ordering" method="get">
+                                    
+                                    <p>Group 8</p>
+
+								</form>
+							</li>
+							
+-->
+
+							<li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>English</option>
+										<option>简体中文</option>
+										<option>Italiano</option>
+									</select>
+								</form>
+							</li>
+                            
+                            <li>
+								<form class="woocommerce-ordering" method="get">
+									<select class="selectpicker">
+										<option>USD</option>
+										<option>EURO</option>
+										<option>RMB</option>
+									</select>
+								</form>
+							</li>
+                            
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="top-bar-right">
+						<ul>
+							<li><a href="profile">My Account</a></li>
+							<!--							<li><a href="#">Today's Deal</a></li>-->
+							<!--							<li><a href="#">My Wishlist</a></li>-->
+							<li><a href="#">Welcome!</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+        
+        
+		<!-- Main css -->
+		<link href="assets/css/main-style.css" rel="stylesheet" >
+		
+	</head>
+
+	<body> 
+
+		
+		<!-- Navigation Area
+			===================================== -->
+			<div class="logo-section">
+		<div class="container">
+			<div class="logo-wrap">
+				<div class="logo">
+					<a href="welcome"><img class="" src="assets/images/logo.png" alt=""></a>
+        
+				</div>
+                
+                <div class="widget_product_search">
+					<input type="text" class="form-control search-box" placeholder="Search" style="background-color: darkblue">
+					<button type="submit" class="submit-search"><i class="fa fa-search"></i></button>
+				</div>
+
+                <form class="woocommerce-ordering" method="get">
+                     <p>     &nbsp &nbsp  </p>
+
+                                    
+                    <p>     &nbsp &nbsp Group 8 </p>
+
+								</form>
+                    
+              
+				
+<!--
+				<div class="widget_product_search">
+					<input type="text" class="form-control search-box" placeholder="Search">
+					<button type="submit" class="submit-search"><i class="fa fa-search"></i></button>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+	
+	<!-- Navigation Area
+		<!-- Navigation Area
+        ===================================== -->
+		<div class="navbar-sticky" >
+			<nav class="navbar navbar-index-top shadow">
+				<div class="container header-container">
+					<div id="main-menu-wrap"><a href="#" class="menu-trigger"></a></div>
+					<!-- Main Menu -->
+					<div id="main-menu" class="main-nav mega_menu_wrapper ">
+					
+						<ul id="custom-menu" class="main-menu mega_menu">
+							<li class="menu-child-list"><a href="welcome"><font color="white">Game Store</font></a></li>
+						<li class="menu-child-list"><a href="myCollection"><font color="white">My Collection</font></a></li>
+						<li><a href="findPlayer"><font color="white">Find Players</font></a></li>
+						<li><a href="community"><font color="white">Community</font></a></li>
+						<li><a href="support"><font color="white">Support</font></a></li>
+						</ul>
+					</div>
+					
+					<div class="pull-right nav-right-section">
+						<ul class=" navbar-mini-cart-wrapper">
+							<!--<li>
+                                <input type="text" class="form-control search-box" placeholder="Enter search items of tags">
+							</li>-->
+						
+						</ul> <!-- end  navbar-mini-cart -->
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		
+		<div id="page_wrapper"></div>
+		
+		<!-- Common Header Area
+        ===================================== -->
+		<section>
+			<div class="breadcrumps-back">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="breadcrumps-heading">
+                                <h1 style="color: darkblue"><font size="6">My Collections</font></h1>
+								
+								<ul>
+								<!--<li> <a href="index"> Home</a> /</li>-->
+									<li> <a href="#"> Sort by</a></li>
+									<li></li>
+                                    
+                                     <select id="tableType" name="tableType" onchange="getTableType();">
+
+                                          <option>Price(low to high)</option>
+
+                                         <option>Price(high to low)</option>
+
+                                         <option>Rencently Added</option>
+
+                                         <option>No.of Players(high to low)</option>
+                                         
+                                         <option>No.of Players(low to high)</option>
+                                         
+                                         <option>Title(A-Z)</option>
+                                         
+                                         <option value="1">Rating(high to low)</option>
+                                         
+                                         <option value="2">Rating(low to high)</option>
+                                         
+
+                                    </select>
+                                  
+                                     
+                                    	
+							<li style="margin-left: 600px; position: relative">
+                                <input type="text" class="form-control search-box" placeholder="Enter search items">
+							</li>
+						
+								</ul>
+						
+						
+								
+							</div>
+                            
+                            
+					
+				
+                            
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Page Content Area
+        ===================================== -->
+		<script>
+			function getTableType() {
+				var value = $("#tableType").val();
+				var div = document.getElementById("div1");
+				if (value =='1') {
+					div.innerHTML = "<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-3.jpg\" alt=\"\" style=\"width: 100px; height: 100px\">\n" +
+							"</div>\n" +
+							"                                                <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Super Animal Royale</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"+"<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-1.jpg\" alt=\"\"  style=\"width: 100px; height: 100px\">\n" +
+							"                                                    <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"false\"></i><i class=\"fa fa-star\" aria-hidden=\"false\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Plants vs. Zombies</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"+"<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-2.jpg\" alt=\"\" style=\"width: 100px; height: 100px\"> \n" +
+							"</div>\n" +
+							"                                                <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Farm Together</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"
+				}
+				if (value =='2') {
+					div.innerHTML = "<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-2.jpg\" alt=\"\" style=\"width: 100px; height: 100px\"> \n" +
+							"</div>\n" +
+							"                                                <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Farm Together</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"+"<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-1.jpg\" alt=\"\"  style=\"width: 100px; height: 100px\">\n" +
+							"                                                    <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"false\"></i><i class=\"fa fa-star\" aria-hidden=\"false\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Plants vs. Zombies</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"+"<tr class=\"cart_item\">\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-image\">\n" +
+							"<img class=\"\" src=\"assets/images/products/cart-3.jpg\" alt=\"\" style=\"width: 100px; height: 100px\">\n" +
+							"</div>\n" +
+							"                                                <div class=\"product-detail-bottom-content\">\n" +
+							"\n" +
+							"<i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n" +
+							"                                                            <ul style=\"display: inline-block\">\n" +
+							"<li><i class=\"fa fa-thumbs-up\" aria-hidden=\"true\"></i> 100</li>\n" +
+							"</ul>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-name\">\n" +
+							"<h5>Super Animal Royale</h5>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"visibility: hidden\">Added 1 day ago</p>\n" +
+							"                                                    <p style=\"font-size: 12px\">Added 1 day ago</p>\n" +
+							"                                              \n" +
+							"</div>\n" +
+							"\n" +
+							"</td>\n" +
+							"<td class=\"cart-detail\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"color: white\">$139.89</h6>\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"<td class=\"cart-quantity\">\n" +
+							"<div class=\"cart-item-quantity\">\n" +
+							"<!--<input class=\"quantity form-group\" type=\"number\" value=\"01\">-->\n" +
+							"</div>\n" +
+							"</td>\n" +
+							"\n" +
+							"<td class=\"product-remove\">\n" +
+							"<!--<a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>-->\n" +
+							"</td>\n" +
+							"                                            <td class=\"cart-price\">\n" +
+							"<div class=\"cart-amount\">\n" +
+							"<h6 style=\"text-decoration: line-through\">$9.99</h6>\n" +
+							"                                                    <h6 style=\"color: cornflowerblue\">from $4.99</h6>\n" +
+							"                                                    <p style=\"visibility: hidden\">remove</p>\n" +
+							"                                                    <a class=\"remove\" title=\"Remove this item\" style=\"text-decoration: underline\">Remove</a>\n" +
+							"                                                    \n" +
+							"</div>\n" +
+							"</td>\n" +
+							"</tr>"
+
+				}
+			}
+		</script>>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12" >
+						<div class="cart-list text-center">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody id="div1">
+										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/products/cart-1.jpg" alt=""  style="width: 100px; height: 100px">
+                                                    	<div class="product-detail-bottom-content">
+				
+							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="false"></i><i class="fa fa-star" aria-hidden="false"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <ul style="display: inline-block">
+									<li><i class="fa fa-thumbs-up" aria-hidden="true"></i> 100</li>
+								</ul>
+						</div>
+												</div>
+											</td>
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Plants vs. Zombies</h5>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="font-size: 12px">Added 1 day ago</p>
+                                              
+												</div>
+
+											</td>
+											<td class="cart-detail">
+												<div class="cart-amount">
+													<h6 style="color: white">$139.89</h6>
+												</div>
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													<!--<input class="quantity form-group" type="number" value="01">-->
+												</div>
+											</td>
+
+											<td class="product-remove">
+											<!--	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>-->					
+											</td>
+                                            <td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="text-decoration: line-through">$9.99</h6>
+                                                    <h6 style="color: cornflowerblue">from $4.99</h6>
+                                                    <p style="visibility: hidden">remove</p>
+                                                    	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>
+                                                    
+												</div>
+											</td>
+										</tr>
+																				<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/products/cart-2.jpg" alt="" style="width: 100px; height: 100px"> 
+												</div>
+                                                <div class="product-detail-bottom-content">
+				
+							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <ul style="display: inline-block">
+									<li><i class="fa fa-thumbs-up" aria-hidden="true"></i> 100</li>
+								</ul>
+						</div>
+											</td>
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Farm Together</h5>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="font-size: 12px">Added 1 day ago</p>
+                                              
+												</div>
+
+											</td>
+											<td class="cart-detail">
+												<div class="cart-amount">
+													<h6 style="color: white">$139.89</h6>
+												</div>
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													<!--<input class="quantity form-group" type="number" value="01">-->
+												</div>
+											</td>
+
+											<td class="product-remove">
+											<!--	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>-->					
+											</td>
+                                            <td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="text-decoration: line-through">$9.99</h6>
+                                                    <h6 style="color: cornflowerblue">from $4.99</h6>
+                                                    <p style="visibility: hidden">remove</p>
+                                                    	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>
+                                                    
+												</div>
+											</td>
+										</tr>
+                                       										<tr class="cart_item">
+											<td class="cart-detail">
+												<div class="cart-image">
+													<img class="" src="assets/images/products/cart-3.jpg" alt="" style="width: 100px; height: 100px">
+												</div>
+                                                <div class="product-detail-bottom-content">
+				
+							<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                                            <ul style="display: inline-block">
+									<li><i class="fa fa-thumbs-up" aria-hidden="true"></i> 100</li>
+								</ul>
+						</div>
+											</td>
+											<td class="cart-detail">
+												<div class="cart-name">
+													<h5>Super Animal Royale</h5>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="visibility: hidden">Added 1 day ago</p>
+                                                    <p style="font-size: 12px">Added 1 day ago</p>
+                                              
+												</div>
+
+											</td>
+											<td class="cart-detail">
+												<div class="cart-amount">
+													<h6 style="color: white">$139.89</h6>
+												</div>
+											</td>
+											<td class="cart-quantity">
+												<div class="cart-item-quantity">
+													<!--<input class="quantity form-group" type="number" value="01">-->
+												</div>
+											</td>
+
+											<td class="product-remove">
+											<!--	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>-->					
+											</td>
+                                            <td class="cart-price">
+												<div class="cart-amount">
+													<h6 style="text-decoration: line-through">$9.99</h6>
+                                                    <h6 style="color: cornflowerblue">from $4.99</h6>
+                                                    <p style="visibility: hidden">remove</p>
+                                                    	<a class="remove" title="Remove this item" style="text-decoration: underline">Remove</a>
+                                                    
+												</div>
+											</td>
+										</tr>
+				
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="cart_coupon_btn">
+							<div class="cart-coupon">
+								<div  style="margin-bottom: 25px">
+									<div style="margin-left: 400px;">
+										<ul>
+											<span>
+                                                <li>
+												<input type="text" class="form-control" placeholder="p">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="1">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="2">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="3">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="4">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="5">
+											</li>
+                                            <li>
+												<input type="text" class="form-control" placeholder="n">
+											</li> 
+                                            </span>
+									<!--		<li>
+												<a href="#" class="btn btn-default checkout-button">Apply Coupon</a>
+											</li>-->
+										</ul>
+									</div>
+								</div>
+								<!--<div class="col-md-6 col-sm-4 col-xs-12">
+									<div class="">
+										<div class="cart-update text-right">
+											<ul>
+												<li>
+													<button class="btn coupon-button" disabled="disabled">Update Cart</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+		</section>
+		<!-- End Section Image Content  -->
+		
+		<!-- Footer Area
+        ===================================== -->
+		
+		
+		
+		<!-- ============ Js Files ============ -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+			
+			<!-- Core js -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>	
+			
+			<script src="assets/js/menu.js"></script>	
+			<script src="assets/js/jquery.sticky.js"></script>	
+			<script src="assets/js/owl.carousel.min.js"></script>	
+			<script src="assets/js/appear.js"></script>	
+			<script src="assets/js/jquery.dcjqaccordion.min.js"></script>	
+			<!--<script src="assets/js/instagram.js"></script>-->	
+			<!-- Google Map -->
+			<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+			<script src="assets/js/gmap3.min.js"></script>	
+			
+			<!-- Custom Script -->		
+			<script src="assets/js/main.js"></script>	
+			
+			
+	</body>
+</html>
+
